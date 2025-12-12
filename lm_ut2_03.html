@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Compra</title>
+</head>
+<body background="imagenes/fondo.jpg" style="color: white;">
+    <h1>Formulario de Compra</h1>
+    <form action="Compra.html" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre" accesskey="n">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required maxlength="50" placeholder="Escribe tu nombre" tabindex="1"><br>
+            <label for="comentarios" accesskey="c">Comentarios:</label> 
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50" tabindex="2"></textarea><br>
+            <label for="email" accesskey="e">Correo electrónico:</label>
+            <input type="text" id="email" name="email" value="usuario@ejemplo.com"
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label><input type="radio" name="envio" value="domicilio" required tabindex="3"> Envío a domicilio</label><br>
+            <label><input type="radio" name="envio" value="recogida" tabindex="4"> Recogida en tienda</label><br>
+            <label><input type="checkbox" name="ofertas" value="si" tabindex="5"> Deseo recibir ofertas</label><br>
+            <label for="archivo" accesskey="f">Sube un archivo:</label>
+            <input type="file" id="archivo" name="archivo" tabindex="6">
+        </fieldset>
+
+        <fieldset>
+            <legend>Productos</legend>
+            <label for="productos">Selecciona un producto:</label>
+            <select id="productos" name="productos" required tabindex="7">
+                <option value="Portatil">Portátil</option>
+                <option value="Teclado">Teclado</option>
+                <option value="Raton">Ratón</option>
+                <option value="Monitor">Monitor</option>
+            </select><br>
+            <label for="extras">Extras:</label>
+            <select id="extras" name="extras" multiple tabindex="8">
+                <option value="cable">Cable HDMI</option>
+                <option value="auriculares">Auriculares</option>
+            </select>
+        </fieldset>
+
+        
+
+        <input type="hidden" name="oculto" value="Oculto">
+        <input type="submit" value="Enviar" tabindex="9">
+        <input type="reset" value="Reiniciar" tabindex="10">
+        <button type="button" onclick="alert('Los productos son reembolsables en un plazo máximo de 30 días')" tabindex="11">Info</button>
+    </form>
+
+    <h2>Enlaces</h2>
+    <a href="index.html"><img src="imagenes/inicio.png" alt="Inicio" width="100" tabindex="12"></a>
+    <a href="aw_ut2_02.html"><img src="imagenes/detalles.png" alt="Detalles" width="100" tabindex="13"></a>
+
+    <br>
+
+    <p>Correo de contacto (solo lectura)</p>
+    <input type="text" id="email" name="email" value="electronics@gmail.com" readonly tabindex="-1">
+</body>
+</html>
